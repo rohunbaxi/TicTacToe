@@ -1,0 +1,155 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.single{}
+.multi{}
+body {
+  color: #2d3436;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: monospace;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.container {
+  background: #1dd1a1;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title span {
+  color: #f5f6fa;
+}
+
+ion-icon{
+    font-size: 32px;
+}
+ion-icon:hover{
+    color: #f5f6fa;
+    cursor: pointer;
+
+}
+.status-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 30px;
+}
+
+
+.status span {
+  color: #f5f6fa;
+}
+
+.reset {
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: #f5f6fa;
+}
+
+.game-grid {
+  background: #10ac84;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 25px;
+}
+
+.game-cell {
+  background: #1dd1a1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+.x,
+.o {
+  cursor: default;
+}
+
+.x::after {
+  content: '×';
+  margin-bottom: 18%;
+  font-size: 200px;
+}
+
+.o::after {
+  content: '○';
+  margin-bottom: 18%;
+  color: #f5f6fa;
+  font-size: 200px;
+}
+
+.won::after {
+  color: #d63031;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+    grid-gap: 10px;
+  }
+
+  .game-cell {
+    height: 150px;
+    width: 150px;
+  }
+
+  .x::after {
+    font-size: 150px;
+  }
+
+  .o::after {
+    font-size: 175px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .game-cell {
+    height: 100px;
+    width: 100px;
+  }
+  .status-action{
+    font-size: 18px;
+  }
+  .x::after {
+    font-size: 100px;
+  }
+
+  .o::after {
+    font-size: 125px;
+  }
+}
